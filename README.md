@@ -25,13 +25,13 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [ ] This is a number guessing game with varying levels of difficulty. Hints will be provided if toggled on.
+- [ ] Various bugs were found, including: hard-coded values for secret number generation, string comparisons were used to compare user's guess with secret number, and incorrect display information for range and attempt values.
+- [ ] Bugs were fixed by using variables, ensuring integer comparisons were used, and information to be displayed is calculated correctly.
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+- [ ] ![Demo Picture](demo_picture.PNG)
 
 ## 🚀 Stretch Features
 

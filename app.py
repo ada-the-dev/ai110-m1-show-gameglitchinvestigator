@@ -44,11 +44,6 @@ if "history" not in st.session_state:
 
 st.subheader("Make a guess")
 
-st.info(
-    f"Guess a number between {low} and {high}. "
-    f"Attempts left: {attempt_limit - st.session_state.attempts}"
-)
-
 with st.expander("Developer Debug Info"):
     st.write("Secret:", st.session_state.secret)
     st.write("Attempts:", st.session_state.attempts)
@@ -69,6 +64,14 @@ with col2:
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
+if submit:
+    st.session_state.attempts += 1
+
+st.info(
+    f"Guess a number between {low} and {high}. "
+    f"Attempts left: {attempt_limit - st.session_state.attempts}"
+)
+
 if new_game:
     st.session_state.attempts = 0
     # FIXME: Bug 1: The secret number is always between 1 and 100, regardless of difficulty.
@@ -86,8 +89,6 @@ if st.session_state.status != "playing":
     st.stop()
 
 if submit:
-    st.session_state.attempts += 1
-
     ok, guess_int, err = parse_guess(raw_guess)
 
     if not ok:
