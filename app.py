@@ -133,6 +133,8 @@ with col3:
 
 if new_game:
     st.session_state.attempts = 0
+    # FIXME: Bug 1: The secret number is always between 1 and 100, regardless of difficulty.
+    # Range values are hardcoded.
     st.session_state.secret = random.randint(1, 100)
     st.success("New game started.")
     st.rerun()
