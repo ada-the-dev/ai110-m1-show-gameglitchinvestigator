@@ -5,8 +5,11 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
-- List at least two concrete bugs you noticed at the start  
-  (for example: "the hints were backwards").
+    Overall, the user interface was visually simple and intuitive. Upon running the application, values were not updated nor displayed correctly, the game's difficulty settings did not incrementally become more difficult, and hints based on the user's input (guesses) were given inconsistently. Not all input given by the user was displayed in the history data structure within the "developer debug info" window. The "New Game" button did not restart the game in a fresh state either.
+- List at least two concrete bugs you noticed at the start (for example: "the hints were backwards").
+    When increasing the game's difficulty from normal to hard, the numerical range for guessing values did not increase. When increasing the game's difficulty from easy to normal, the given attempts increased. I expect that the numerical ranges increase, and that the given attempts decrease when game difficulty increases.
+
+    Adding on, the secret number for a game is not guarenteed to be within the range of that game's difficulty.
 
 ---
 
