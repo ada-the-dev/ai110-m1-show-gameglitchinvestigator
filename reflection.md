@@ -50,4 +50,4 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - What is one thing you would do differently next time you work with AI on a coding task?
     One thing I would do differently is use the AI to familiarize myself with the codebase more.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
-    I think that AI generated code streamlines project building a lot more than I thought.
+    I learned that AI generated code streamlines project building a lot more than I thought.

@@ -1,3 +1,6 @@
+# FIX: Claude refactored game logic into logic_utils.py for better testability and modularity. I confirmed the logic.
+
+# FIX: Claude generated get_range_for_difficulty function. I removed a redundant line and confirmed function logic.
 def get_range_for_difficulty(difficulty: str):
     """Return (low, high) inclusive range for a given difficulty."""
     if difficulty == "Easy":
@@ -30,7 +33,7 @@ def parse_guess(raw: str):
 
     return True, value, None
 
-
+# FIX: Claude generated check_guess function. I removed unnecessary code that allowed string comparison and confirmed function logic.
 def check_guess(guess, secret):
     """
     Compare guess to secret and return (outcome, message).
