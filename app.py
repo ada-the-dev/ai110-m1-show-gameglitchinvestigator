@@ -158,6 +158,8 @@ if submit:
     else:
         st.session_state.history.append(guess_int)
 
+        # FIXME: Bug 2: On even attempts, secret is cast to a string, causing check_guess
+        # to use string comparison (e.g. "9" > "10" is True), which gives wrong hints.
         if st.session_state.attempts % 2 == 0:
             secret = str(st.session_state.secret)
         else:
