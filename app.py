@@ -160,10 +160,9 @@ if submit:
 
         # FIXME: Bug 2: On even attempts, secret is cast to a string, causing check_guess
         # to use string comparison (e.g. "9" > "10" is True), which gives wrong hints.
-        if st.session_state.attempts % 2 == 0:
-            secret = str(st.session_state.secret)
-        else:
-            secret = st.session_state.secret
+        # FIX: secret is always an int (set via random.randint), so pass it directly
+        # so check_guess always uses numeric comparison.
+        secret = st.session_state.secret
 
         outcome, message = check_guess(guess_int, secret)
 
